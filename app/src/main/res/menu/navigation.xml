@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/home"
+        android:title="@string/item1" />
+    <item
+        android:id="@+id/service"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/find"
+        android:title="@string/item2" />
+    <item
+        android:id="@+id/message"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/map"
+        android:title="@string/item3" />
+
+    <item
+        android:id="@+id/personal"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/set"
+        android:title="@string/item4" />
+</menu>

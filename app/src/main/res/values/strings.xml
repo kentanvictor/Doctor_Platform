@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Doctor_Platform</string>
     <string name="but1">打開地圖</string>
+    <string name="ic_exit">提交</string>
+    <string name="item1">Home</string>
+    <string name="item2">Find</string>
+    <string name="item3">Map</string>
+    <string name="item4">Set</string>
 </resources>
