@@ -2,11 +2,11 @@ package com.example.dell.doctor_platform.activity;
 
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by DELL on 2017/7/4.
+/*
+ * Created by Ken Tan on 2017/7/4.
  */
 
-public class BaseActivity extends AppCompatActivity{
+public class BaseActivity extends AppCompatActivity {
    /* private ForceOfflineReceiver receiver;
 
     class ForceOfflineReceiver extends BroadcastReceiver{

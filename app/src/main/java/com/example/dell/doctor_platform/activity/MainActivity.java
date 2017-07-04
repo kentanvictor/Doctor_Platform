@@ -7,8 +7,9 @@ import android.widget.Button;
 
 import com.example.dell.doctor_platform.R;
 
-public class MainActivity extends BaseActivity{
-    private Button lbsActivity ;
+public class MainActivity extends BaseActivity {
+    private Button lbsActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +18,7 @@ public class MainActivity extends BaseActivity{
         lbsActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,LBSActivity.class);
+                Intent intent = new Intent(MainActivity.this, LBSActivity.class);
                 startActivity(intent);
             }
         });

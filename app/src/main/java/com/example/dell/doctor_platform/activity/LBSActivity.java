@@ -29,7 +29,7 @@ import java.util.List;
  * Created by Ken Tan on 2017/7/4.
  */
 
-public class LBSActivity extends BaseActivity{
+public class LBSActivity extends BaseActivity {
     public LocationClient mLocationClient;
     private TextView positionText;
     private MapView mapView;
@@ -136,6 +136,7 @@ public class LBSActivity extends BaseActivity{
             default:
         }
     }
+
     public class MyLocationListener implements BDLocationListener {
         @Override
         public void onReceiveLocation(BDLocation location) {
@@ -159,6 +160,7 @@ public class LBSActivity extends BaseActivity{
                 navigateTo(location);
             }
         }
+
         @Override
         public void onConnectHotSpotMessage(String s, int i) {
         }
