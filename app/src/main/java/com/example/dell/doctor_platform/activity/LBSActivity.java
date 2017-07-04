@@ -39,10 +39,10 @@ public class LBSActivity extends BaseActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lbs_activity);
         mLocationClient = new LocationClient(getApplicationContext());
         mLocationClient.registerLocationListener(new MyLocationListener());
         SDKInitializer.initialize(getApplicationContext());
+        setContentView(R.layout.lbs_activity);
         mapView = (MapView) findViewById(R.id.bmapView);
         baiduMap = mapView.getMap();
         baiduMap.setMyLocationEnabled(true);
