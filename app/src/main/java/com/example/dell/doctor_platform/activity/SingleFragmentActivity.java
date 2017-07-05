@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 /*
  * Created by Kentan on 2017/7/4.
  */
-public abstract class SingleFragmentActivity extends AppCompatActivity{
+public abstract class SingleFragmentActivity extends AppCompatActivity {
 
     private FragmentManager fm;
     private Fragment mFragment;
@@ -40,7 +40,8 @@ public abstract class SingleFragmentActivity extends AppCompatActivity{
         }
         init();
     }
-    public void init(){
+
+    public void init() {
 
     }
 

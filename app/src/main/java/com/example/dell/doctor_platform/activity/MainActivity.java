@@ -15,6 +15,7 @@ import com.example.dell.doctor_platform.fragment.SetFragment;
 public class MainActivity extends SingleFragmentActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
+
     @Override
     protected Fragment createFragment() {
         return Homefragment.newInstance();
@@ -45,8 +46,7 @@ public class MainActivity extends SingleFragmentActivity implements
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case R.id.navigation_home:
                 switchFragment(Homefragment.newInstance());
                 break;
