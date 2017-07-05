@@ -7,12 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.dell.doctor_platform.R;
 import com.example.dell.doctor_platform.gson.Person;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
+
+import static cn.bmob.v3.Bmob.getApplicationContext;
 
 /*
  * Created by Kentan on 2017/7/4.
@@ -35,6 +38,13 @@ public class SetFragment extends Fragment {
                 p1.save(new SaveListener<String>() {
                     @Override
                     public void done(String objectId, BmobException e) {
+                        if(e == null)
+                        {
+                            Toast.makeText(getApplicationContext(),"添加数据成功，返回objectId为："+objectId,Toast.LENGTH_SHORT).show();
+                        }else
+                        {
+                            Toast.makeText(getApplicationContext(),"创建数据失败：" + e.getMessage(),Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
             }
