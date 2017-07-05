@@ -1,13 +1,10 @@
 package com.example.dell.doctor_platform.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.example.dell.doctor_platform.R;
 import com.example.dell.doctor_platform.fragment.Homefragment;
@@ -15,8 +12,6 @@ import com.example.dell.doctor_platform.fragment.Homefragment;
 public class MainActivity extends SingleFragmentActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
-    private Button lbsActivity;
-
     @Override
     protected Fragment createFragment() {
         return Homefragment.newInstance();
@@ -43,14 +38,6 @@ public class MainActivity extends SingleFragmentActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        lbsActivity = (Button) findViewById(R.id.LBS_Activity);
-        lbsActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LBSActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
