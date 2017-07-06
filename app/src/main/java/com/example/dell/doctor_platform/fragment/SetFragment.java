@@ -22,9 +22,11 @@ import cn.bmob.v3.listener.SaveListener;
 public class SetFragment extends Fragment {
     private Button add;
     Person p1 = new Person();
+
     public static Fragment newInstance() {
         return new SetFragment();
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup
             container, @Nullable Bundle savedInstanceState) {
@@ -38,12 +40,10 @@ public class SetFragment extends Fragment {
                 p1.save(new SaveListener<String>() {
                     @Override
                     public void done(String objectId, BmobException e) {
-                        if(e == null)
-                        {
-                            Toast.makeText(getContext(),"添加数据成功，返回objectId为："+objectId,Toast.LENGTH_SHORT).show();
-                        }else
-                        {
-                            Toast.makeText(getContext(),"创建数据失败：" + e.getMessage(),Toast.LENGTH_SHORT).show();
+                        if (e == null) {
+                            Toast.makeText(getContext(), "添加数据成功，返回objectId为：" + objectId, Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getContext(), "创建数据失败：" + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -51,6 +51,7 @@ public class SetFragment extends Fragment {
         });
         return view;
     }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

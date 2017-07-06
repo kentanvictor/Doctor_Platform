@@ -14,15 +14,14 @@ import com.example.dell.doctor_platform.R;
  */
 
 public class LBSFragment extends Fragment {
-    public static Fragment newInstance()
-    {
+    public static Fragment newInstance() {
         return new LBSFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_lbs,container,false);
-        return v;
+        View view = inflater.inflate(R.layout.fragment_lbs, container, false);
+        return view;
     }
 }
