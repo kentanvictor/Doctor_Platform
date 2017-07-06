@@ -42,7 +42,6 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     }
 
     public void init() {
-
     }
 
     public void switchFragment(Fragment fragment) {

@@ -1,6 +1,5 @@
 package com.example.dell.doctor_platform.activity;
 
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends SingleFragmentActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {
-    private BottomNavigationView bottomNavigationView;
+    public BottomNavigationView navigationView;
 
     @Override
     protected Fragment createFragment() {
@@ -41,15 +40,10 @@ public class MainActivity extends SingleFragmentActivity implements
     @Override
     public void init() {
         super.init();
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        navigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        navigationView.setOnNavigationItemSelectedListener(this);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -58,6 +52,10 @@ public class MainActivity extends SingleFragmentActivity implements
                 switchFragment(Homefragment.newInstance());
                 break;
             case R.id.navigation_find:
+//                    Intent intent = new Intent(MainActivity.this, TestActivity.class);
+//                    startActivity(intent);
+//                switchFragment(TestFragment.newInstance(BeanLab.
+//                        get(App.getContext()).getBeans().get(0).getId()));
                 switchFragment(Searchfragment.newInstance());
                 break;
             case R.id.navigation_map:
@@ -65,9 +63,11 @@ public class MainActivity extends SingleFragmentActivity implements
                 break;
             case R.id.navigation_set:
                 switchFragment(SetFragment.newInstance());
+                break;
         }
         return true;
     }
+
 
     public static class HomepagerAdapter extends PagerAdapter {
         private ArrayList<FrameLayout> viewList;

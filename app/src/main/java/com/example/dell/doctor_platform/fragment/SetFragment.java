@@ -15,8 +15,6 @@ import com.example.dell.doctor_platform.gson.Person;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
-import static cn.bmob.v3.Bmob.getApplicationContext;
-
 /*
  * Created by Kentan on 2017/7/4.
  */
@@ -28,8 +26,10 @@ public class SetFragment extends Fragment {
         return new SetFragment();
     }
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup
+            container, @Nullable Bundle savedInstanceState) {
+        final View view = inflater.inflate(R.layout.fragment_set, container, false);
+        add = (Button) view.findViewById(R.id.add_person);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,23 +40,19 @@ public class SetFragment extends Fragment {
                     public void done(String objectId, BmobException e) {
                         if(e == null)
                         {
-                            Toast.makeText(getApplicationContext(),"添加数据成功，返回objectId为："+objectId,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(),"添加数据成功，返回objectId为："+objectId,Toast.LENGTH_SHORT).show();
                         }else
                         {
-                            Toast.makeText(getApplicationContext(),"创建数据失败：" + e.getMessage(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(),"创建数据失败：" + e.getMessage(),Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
             }
         });
-    }
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup
-            container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_home, container, false);
-        add = (Button) view.findViewById(R.id.add_person);
         return view;
     }
-
-
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 }
