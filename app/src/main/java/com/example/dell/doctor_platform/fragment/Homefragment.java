@@ -29,7 +29,7 @@ public class Homefragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup
             container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        initView(view);
+        /*initView(view);*/
         return view;
     }
 
