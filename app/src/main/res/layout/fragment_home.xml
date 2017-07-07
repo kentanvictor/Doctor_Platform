@@ -4,10 +4,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:showDividers="middle">
-    <Button
+    <ScrollView
+        android:id="@+id/doctor_main_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/turn_map"
-        />
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/home_search"/>
+            <include layout="@layout/home_push"/>
+            <include layout="@layout/home_hospital"/>
+            <include layout="@layout/home_department"/>
+            <include layout="@layout/home_list"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
