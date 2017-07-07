@@ -10,4 +10,10 @@
     <string name="crime_title_label">Title</string>
     <string name="crime_details_label">Details</string>
     <string name="crime_solved_label">Solved?</string>
+    <string name="internal_medicine_button">内 科</string>
+    <string name="Surgery_button">外 科</string>
+    <string name="OGD_button">妇产科</string>
+    <string name="Pediatrics_button">儿 科</string>
+    <string name="search_edit">请输入要搜索的内容</string>
+    <string name="search_button">搜 索</string>
 </resources>
