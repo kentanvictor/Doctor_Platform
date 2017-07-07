@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/children_category"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="@string/children_category_button" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/gynecology"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="@string/gynecology" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/andrology"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="@string/andrology" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/elderly"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="@string/elderly" />
+
+</LinearLayout>
