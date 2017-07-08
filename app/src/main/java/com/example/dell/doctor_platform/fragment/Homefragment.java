@@ -25,6 +25,7 @@ public class Homefragment extends Fragment implements View.OnClickListener {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup
             container, @Nullable Bundle savedInstanceState) {
@@ -34,14 +35,14 @@ public class Homefragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView(View view) {
-        Button turnMap = (Button) view.findViewById(R.id.turn_map);
-        turnMap.setOnClickListener(this);
+        Button search_but1 = (Button) view.findViewById(R.id.search_but1);
+        search_but1.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.turn_map:
+            case R.id.search_but1:
                 Intent intent = new Intent(getContext(), LBSActivity.class);
                 startActivity(intent);
         }
