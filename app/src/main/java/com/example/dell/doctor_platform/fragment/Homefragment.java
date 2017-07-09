@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.dell.doctor_platform.R;
 import com.example.dell.doctor_platform.activity.LBSActivity;
@@ -35,8 +36,12 @@ public class Homefragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView(View view) {
+        EditText search_edit1 = (EditText) view.findViewById(R.id.search_edit);
         Button search_but1 = (Button) view.findViewById(R.id.search_but1);
+        Button children_but = (Button) view.findViewById(R.id.children_category);
+        search_edit1.setOnClickListener(this);
         search_but1.setOnClickListener(this);
+        children_but.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +50,13 @@ public class Homefragment extends Fragment implements View.OnClickListener {
             case R.id.search_but1:
                 Intent intent = new Intent(getContext(), LBSActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.search_edit:
+                break;
+            case R.id.children_category:
+                break;
+            default:
+                break;
         }
     }
 }
