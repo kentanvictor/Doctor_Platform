@@ -3,7 +3,6 @@ package com.example.dell.doctor_platform.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,6 @@ import cn.bmob.v3.listener.SaveListener;
  */
 
 public class SetFragment extends Fragment {
-    private static final String LOG_TAG =  "MY_LOG_TAG";
     private Button add;
     Person p1 = new Person();
 
@@ -43,10 +41,8 @@ public class SetFragment extends Fragment {
                     @Override
                     public void done(String objectId, BmobException e) {
                         if (e == null) {
-                            Log.d(LOG_TAG,"Succeeded");
                             Toast.makeText(getContext(), "添加数据成功，返回objectId为：" + objectId, Toast.LENGTH_SHORT).show();
                         } else {
-                            Log.d(LOG_TAG,"Fail");
                             Toast.makeText(getContext(), "创建数据失败：" + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }

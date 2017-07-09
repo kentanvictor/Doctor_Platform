@@ -11,16 +11,25 @@ import android.view.ViewParent;
 import android.widget.FrameLayout;
 
 import com.example.dell.doctor_platform.R;
+import com.example.dell.doctor_platform.adapter.BaseAdapterHelper;
+import com.example.dell.doctor_platform.adapter.QuickAdapter;
 import com.example.dell.doctor_platform.fragment.Homefragment;
 import com.example.dell.doctor_platform.fragment.LBSFragment;
 import com.example.dell.doctor_platform.fragment.Searchfragment;
 import com.example.dell.doctor_platform.fragment.SetFragment;
+import com.example.dell.doctor_platform.gson.Person;
 
 import java.util.ArrayList;
 
 public class MainActivity extends SingleFragmentActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {
     public BottomNavigationView navigationView;
+    protected int mScreenWidth;
+    protected int mScreenHeight;
+    protected QuickAdapter<Person> LostAdapter;
+    protected int add_Name = 1;
+    protected int add_Address = 2;
+
 
     @Override
     protected Fragment createFragment() {
@@ -42,6 +51,21 @@ public class MainActivity extends SingleFragmentActivity implements
         super.init();
         navigationView = (BottomNavigationView) findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    public void setContentView() {
+
+    }
+
+    @Override
+    public void initViews() {
+
+    }
+
+    @Override
+    public void initListeners() {
+
     }
 
 
@@ -111,6 +135,18 @@ public class MainActivity extends SingleFragmentActivity implements
 
     @Override
     public void onBackPressed() {
+    }
 
+    @Override
+    public void initData() {
+        if (LostAdapter == null) {
+            LostAdapter = new QuickAdapter<Person>(this, R.layout.fragment_set) {
+                @Override
+                protected void convert(BaseAdapterHelper helper, Person lost) {
+                    helper.setText(add_Name, lost.getName())
+                            .setText(add_Address, lost.getAddress());
+                }
+            };
+        }
     }
 }

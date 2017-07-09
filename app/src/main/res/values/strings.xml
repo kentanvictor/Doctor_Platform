@@ -21,4 +21,6 @@
     <string name="andrology">男科类</string>
     <string name="elderly">老年类</string>
     <string name="push_text">消息推送</string>
+    <string name="name">name</string>
+    <string name="address">address</string>
 </resources>
