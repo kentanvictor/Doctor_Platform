@@ -52,10 +52,6 @@ public class MainActivity extends SingleFragmentActivity implements
                 switchFragment(Homefragment.newInstance());
                 break;
             case R.id.navigation_find:
-//                    Intent intent = new Intent(MainActivity.this, TestActivity.class);
-//                    startActivity(intent);
-//                switchFragment(TestFragment.newInstance(BeanLab.
-//                        get(App.getContext()).getBeans().get(0).getId()));
                 switchFragment(Searchfragment.newInstance());
                 break;
             case R.id.navigation_map:

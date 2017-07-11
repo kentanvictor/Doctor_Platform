@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
+import cn.bmob.v3.Bmob;
+
 /*
  * Created by Kentan on 2017/7/4.
  */
@@ -28,6 +30,7 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
+        Bmob.initialize(this,"fc49e0d873ae4a3d3abf55f7062ed079");
 
         fm = getSupportFragmentManager();
         mFragment = fm.findFragmentById(getContainerId());
